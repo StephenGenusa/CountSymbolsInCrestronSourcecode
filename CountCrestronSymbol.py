@@ -110,9 +110,8 @@ def main():
     print "Symbol Counter - By Stephen Genusa - v1.0"
     parser = argparse.ArgumentParser(description="Symbol Counter - By Stephen Genusa - v1.0")
     parser.add_argument("-i", "--inputpath", dest="inputpath", default = ".", help="Input path", required=True)
-    parser.add_argument("-m", "--includemodules", dest="includemodules", action='store_true', default = False, help="Leave out CMCs, UMCs and USPs")
+    parser.add_argument("-m", "--includemodules", dest="includemodules", action='store_true', default = False, help="Include in symbol listing external CMCs, UMCs and USPs")
     parser.add_argument("-s", "--showfilenames", dest="showfilenames", action='store_true', default = False, help="Show filenames as they are parsed")
-    parser.add_argument("-r", "--recursive", dest="recursive", action='store_true', default = False, help="Recursively include subdirectories")
     args = parser.parse_args()
     counter = CountUniqueCrestronSymbols(args.includemodules, args.showfilenames, args.inputpath)
     
