@@ -36,7 +36,6 @@ import glob
 import os
 import re
 from collections import Counter, OrderedDict
-from tabulate import tabulate
 
 class CountUniqueCrestronSymbols:
 
